@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/alexnguyen7369/Documents/GitHub/**)",
+      "Read(//Users/alexnguyen7369/.claude/**)",
+      "Bash(mkdir -p ~/.claude/commands)",
+      "Bash(cp /Users/alexnguyen7369/Documents/GitHub/Personal-Projects/product-vision-matcher/.claude/skills/system-design-brainstorm/SKILL.md ~/.claude/commands/system-design-brainstorm.md)",
+      "Bash(mkdir -p /Users/alexnguyen7369/Documents/GitHub/Personal-Projects/visual-product-authenticity-checker/.claude/commands)",
+      "Bash(cp /Users/alexnguyen7369/Documents/GitHub/Personal-Projects/product-vision-matcher/.claude/skills/system-design-brainstorm/SKILL.md /Users/alexnguyen7369/Documents/GitHub/Personal-Projects/visual-product-authenticity-checker/.claude/commands/system-design-brainstorm.md)"
+    ]
+  }
+}
