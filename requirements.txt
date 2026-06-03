@@ -1,0 +1,9 @@
+# Phase 0 — starter environment (the smallest set that proves the vertical slice works).
+# More deps (pytesseract, redis, etc.) get added as each phase begins.
+
+opencv-python        # cv2: webcam capture + image preprocessing primitives
+numpy                # the array type every frame actually *is* (H x W x 3 uint8)
+pillow               # encode frames to JPEG/PNG bytes before sending over the wire
+google-genai         # Gemini Vision client (the project's primary VLM). NB: replaces the
+                     # now-EOL `google-generativeai` package the docs still reference.
+python-dotenv        # load GEMINI_API_KEY from a .env file, keep secrets out of code

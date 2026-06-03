@@ -1,0 +1,21 @@
+# Virtual environment — never commit; it's machine-specific and huge
+.venv/
+
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Captured frames / scratch output
+captures/
+*.jpg
+*.png
+!src/notes/**/*.png
+
+# OS
+Thumbs.db
+.DS_Store
