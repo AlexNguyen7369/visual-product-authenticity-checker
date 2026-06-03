@@ -6,7 +6,17 @@
       "Bash(mkdir -p ~/.claude/commands)",
       "Bash(cp /Users/alexnguyen7369/Documents/GitHub/Personal-Projects/product-vision-matcher/.claude/skills/system-design-brainstorm/SKILL.md ~/.claude/commands/system-design-brainstorm.md)",
       "Bash(mkdir -p /Users/alexnguyen7369/Documents/GitHub/Personal-Projects/visual-product-authenticity-checker/.claude/commands)",
-      "Bash(cp /Users/alexnguyen7369/Documents/GitHub/Personal-Projects/product-vision-matcher/.claude/skills/system-design-brainstorm/SKILL.md /Users/alexnguyen7369/Documents/GitHub/Personal-Projects/visual-product-authenticity-checker/.claude/commands/system-design-brainstorm.md)"
+      "Bash(cp /Users/alexnguyen7369/Documents/GitHub/Personal-Projects/product-vision-matcher/.claude/skills/system-design-brainstorm/SKILL.md /Users/alexnguyen7369/Documents/GitHub/Personal-Projects/visual-product-authenticity-checker/.claude/commands/system-design-brainstorm.md)",
+      "Bash(py --version)",
+      "Bash(where python *)",
+      "Bash(where uv *)",
+      "Bash(py -m venv .venv)",
+      "Bash(.\\\\.venv\\\\Scripts\\\\python.exe -m pip install --upgrade pip --quiet)",
+      "PowerShell(py *)",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\python.exe -c \"import cv2, numpy, PIL, google.generativeai as genai, dotenv; print\\('cv2', cv2.__version__\\); print\\('numpy', numpy.__version__\\); print\\('pillow', PIL.__version__\\); print\\('all imports OK'\\)\")",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\python.exe -m pip uninstall google-generativeai -y --quiet; .\\\\.venv\\\\Scripts\\\\python.exe -m pip install google-genai --quiet; .\\\\.venv\\\\Scripts\\\\python.exe -c \"from google import genai; print\\('google-genai OK'\\)\")",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\python.exe -m pip install pytest --quiet; .\\\\.venv\\\\Scripts\\\\python.exe -m pytest --version)",
+      "PowerShell(.\\\\.venv\\\\Scripts\\\\python.exe experiments\\\\assets\\\\make_sample.py; Write-Output \"--- M1 ---\"; .\\\\.venv\\\\Scripts\\\\python.exe experiments\\\\m01_hello_venv.py; Write-Output \"--- pytest \\(expect red: NotImplementedError\\) ---\"; .\\\\.venv\\\\Scripts\\\\python.exe -m pytest experiments\\\\tests -q)"
     ]
   }
 }
