@@ -12,9 +12,10 @@
 - For every module: build it, then **write the test cases before you call it done**, then run the
   **debugging drill** (deliberately break it and watch how it fails — debugging is a skill you practice,
   not a thing you do only in emergencies).
-- Keep each module as its own throwaway script under a scratch folder (e.g. `experiments/`), *not* in
-  `src/`. `src/` is for the real project; this is a sandbox. (`experiments/` is git-ignored by the
-  `captures/` / scratch rules — add it to `.gitignore` if you want to keep the sandbox out of git.)
+- Each module is its own script under `experiments/`, *not* in `src/`. `src/` is for the real project; this
+  is a sandbox. The stub code under `experiments/` is tracked in git (so you can commit your solutions as
+  you go), while the image outputs it produces are git-ignored by the `*.jpg` / `*.png` rules. Run
+  `experiments/assets/make_sample.py` once to generate a sample image the still-image modules can load.
 - Run everything inside the project venv (`.\.venv\Scripts\Activate.ps1`).
 
 ## The testing mindset (read once, apply everywhere)

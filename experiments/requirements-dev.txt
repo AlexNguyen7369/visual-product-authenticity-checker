@@ -1,0 +1,2 @@
+# Extra deps used only by the sandbox (not the real project runtime).
+pytest
