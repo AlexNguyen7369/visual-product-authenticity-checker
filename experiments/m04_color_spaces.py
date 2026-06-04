@@ -4,6 +4,7 @@ Goal: see why skipping BGR->RGB makes colors wrong, and how grayscale changes th
 Learn: cvtColor, split/merge; grayscale collapses (H,W,3) -> (H,W); round-trip identity.
 Maps to: the mandatory BGR->RGB before encoding in Step 0.3; Phase 1 preprocessing.
 
+
 See ../src/notes/roadmap.md (M4).
 """
 from pathlib import Path
@@ -11,16 +12,18 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-ASSETS = Path(__file__).resolve().parent / "assets"
+ASSETS = Path(__file__).resolve().parent / "assets" 
 
 
-def to_rgb(bgr: np.ndarray) -> np.ndarray:
+def to_rgb(bgr: np.ndarray) -> np.ndarray: # input is a numpyarray in BGR format, output should be a numpy array in RGB format
     """TODO: cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)"""
+    return cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
     raise NotImplementedError
 
 
 def to_gray(bgr: np.ndarray) -> np.ndarray:
     """TODO: cv2.cvtColor(bgr, cv2.COLOR_BGR2GRAY) — note the result is 2-D."""
+    return cv2.cvtColor(bgr, cv2.COLOR_BGR2GRAY)
     raise NotImplementedError
 
 
