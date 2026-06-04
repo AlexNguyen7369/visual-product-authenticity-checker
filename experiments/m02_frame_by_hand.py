@@ -3,6 +3,10 @@
 Goal: internalize that a frame IS an (H, W, 3) uint8 ndarray — a flat byte buffer + shape.
 Learn: shape/dtype/nbytes, slicing-as-view (aliasing), BGR vs RGB, uint8 overflow.
 Maps to: the data structure every later module passes around; BGR->RGB in Step 0.3.
+shape: (height, width, 3) — the 3 is for the color channels (BGR or RGB)
+dtype: uint8 (0-255) — the color values are 8-bit unsigned integers
+slice-as-view: slicing an array creates a view (alias), not a copy; modifying the view modifies the original, syntax: frame[..., ::-1] reverses the last axis (color channels)
+
 
 See ../src/notes/roadmap.md (M2) for the full why, the test cases, and the debugging drill.
 """
