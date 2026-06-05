@@ -18,6 +18,8 @@ def image_hash(img: np.ndarray) -> str:
     # TODO:
     #   ok, buf = cv2.imencode('.jpg', img)
     #   return hashlib.sha256(buf.tobytes()).hexdigest()
+    success, buf = cv2.imencode('.jpg', img)
+    return hashlib.sha256(buf.tobytes()).hexdigest() 
     raise NotImplementedError
 
 
