@@ -13,12 +13,16 @@ import numpy as np
 
 
 def to_jpeg_bytes(img: np.ndarray) -> bytes:
-    """Encode an ndarray to JPEG bytes. TODO: ok, buf = cv2.imencode('.jpg', img); return buf.tobytes()"""
-    raise NotImplementedError
+    """Encode an ndarray to JPEG bytes. TODO: ok, buf = cv2.imencode('.jpg', img); return buf.tobytes()""" 
+    success, buf = cv2.imencode('.jpg', img)
+    if not success:
+        raise ValueError("Failed to encode image to JPEG format")
+    return buf.tobytes()
 
 
 def to_base64(data: bytes) -> str:
     """TODO: base64.b64encode(data).decode('ascii')"""
+    return base64.b64encode(data).decode('ascii') 
     raise NotImplementedError
 
 
