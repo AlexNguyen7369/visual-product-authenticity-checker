@@ -14,11 +14,13 @@ import numpy as np
 def resize_square(img: np.ndarray, size: int = 1024) -> np.ndarray:
     """Resize to exactly (size, size, 3). Watch the (width, height) argument order."""
     # TODO: cv2.resize(img, (size, size))
+    return cv2.resize(img, (size, size))
     raise NotImplementedError
 
 
 def denoise(img: np.ndarray) -> np.ndarray:
     """TODO: cv2.fastNlMeansDenoisingColored(img, None, 10, 10, 7, 21)"""
+    return cv2.fastNlMeansDenoisingColored(img, None, 10, 10, 7, 21)
     raise NotImplementedError
 
 

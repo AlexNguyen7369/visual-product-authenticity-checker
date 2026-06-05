@@ -14,10 +14,16 @@ import numpy as np
 def largest_bbox(binary: np.ndarray):
     """Return (x, y, w, h) of the largest contour, or None if there are no contours."""
     # TODO:
-    #   contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    #   contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE) 
     #   if not contours: return None
     #   biggest = max(contours, key=cv2.contourArea)
     #   return cv2.boundingRect(biggest)
+
+    contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    if not contours:
+        return None
+    biggest = max(contours, key=cv2.contourArea)
+    return cv2.boundingRect(biggest)
     raise NotImplementedError
 
 
