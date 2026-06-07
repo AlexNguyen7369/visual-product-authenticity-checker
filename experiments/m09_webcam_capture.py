@@ -17,7 +17,7 @@ SPACE = 32
 
 def is_space(key: int) -> bool:
     """Pure, testable: was the SPACE bar pressed? (waitKey returns -1 when no key.)"""
-    return key == SPACE
+    return key == SPACE 
 
 
 def capture_on_space():

@@ -22,6 +22,11 @@ ASSETS = Path(__file__).resolve().parent / "assets"
 def process(frame_bgr):
     """frame (BGR) -> RGB -> denoise -> resize 1024 -> (processed_rgb, hash)."""
     # TODO: chain to_rgb -> denoise -> resize_square, then image_hash() the result.
+    frame_rgb = to_rgb(frame_bgr)
+    frame_denoised = denoise(frame_rgb)
+    frame_resized = resize_square(frame_denoised, 1024)
+    hash = image_hash(frame_resized)
+    return frame_resized, hash
     raise NotImplementedError
 
 
