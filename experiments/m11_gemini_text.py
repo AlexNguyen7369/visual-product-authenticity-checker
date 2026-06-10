@@ -11,6 +11,7 @@ Get a free key at https://aistudio.google.com . See ../src/notes/roadmap.md (M11
 import os
 
 from dotenv import load_dotenv
+from google import genai
 
 
 def get_api_key() -> str:
@@ -29,6 +30,9 @@ def ask(prompt: str) -> str:
     #   client = genai.Client(api_key=get_api_key())
     #   resp = client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
     #   return resp.text
+    client = genai.Client(api_key=get_api_key())
+    resp = client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
+    return resp.text    
     raise NotImplementedError
 
 
