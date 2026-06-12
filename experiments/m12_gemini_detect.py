@@ -23,6 +23,13 @@ def parse_yes_no(text: str) -> bool:
     Examples to handle: 'YES', 'yes.', 'Yes, it is', 'NO', 'I cannot determine'.
     """
     # TODO: normalize (strip/lower), check startswith('yes')/('no'); decide what UNKNOWN does.
+    normalized = text.strip().lower()
+    if normalized.startswith("yes"):
+        return True
+    elif normalized.startswith("no"):
+        return False
+    else:
+        raise ValueError(f"Unexpected model output: {text!r}")
     raise NotImplementedError
 
 
@@ -41,7 +48,19 @@ def is_sneaker(frame_bgr) -> bool:
     #       ],
     #   )
     #   return parse_yes_no(resp.text)
-    raise NotImplementedError
+
+    from google import genai
+    rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)
+    jpeg = to_jpeg_bytes(rgb)
+    client = genai.Client(api_key=get_api_key())
+    response = client.models.generate_content(
+        model = "gemini-2.5-flash",
+        contents = [
+            genai.types.Part.from_bytes(data=jpeg, mime_type="image/jpeg"),
+            "Reply with only YES or NO: is there a sneaker/athletic shoe in this image?",
+        ]
+    )
+    return parse_yes_no(response.text)
 
 
 def main() -> None:
